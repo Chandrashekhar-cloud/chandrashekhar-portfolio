@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chandrashekhar H S — Portfolio</title>
+  <meta name="description" content="Chandrashekhar H S — Computer Science (AI & ML) student. Cloud, automation, and AI/ML projects.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme');
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ===== FIXED NAVBAR ===== -->
+  <header class="nav" id="mainHeader">
+    <div class="nav__container">
+      <a href="#top" class="nav__logo">
+        CHANDRASHEKHAR H S
+      </a>
+      
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav__menu" aria-label="Main Navigation">
+        <a href="#about" class="nav__link" data-nav-link>About</a>
+        <a href="#education" class="nav__link" data-nav-link>Education</a>
+        <a href="#projects" class="nav__link" data-nav-link>Projects</a>
+        <a href="#skills" class="nav__link" data-nav-link>Skills</a>
+        <a href="#certifications" class="nav__link" data-nav-link>Certifications</a>
+        <a href="#contact" class="nav__link" data-nav-link>Contact</a>
+      </nav>
+
+      <!-- Theme Switcher -->
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+        <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+
+      <!-- Hamburger toggle button -->
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navDrawer">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== MOBILE DRAWER MENU ===== -->
+  <nav class="drawer" id="navDrawer" aria-hidden="true">
+    <div class="drawer__header">
+      <span class="drawer__title">Menu</span>
+    </div>
+    <ol class="drawer__list">
+      <li><a href="#about" data-link>About</a></li>
+      <li><a href="#education" data-link>Education</a></li>
+      <li><a href="#projects" data-link>Projects</a></li>
+      <li><a href="#skills" data-link>Skills</a></li>
+      <li><a href="#certifications" data-link>Certifications</a></li>
+      <li><a href="#contact" data-link>Contact</a></li>
+    </ol>
+
+    <div class="drawer__footer">
+      <a class="drawer__resume" href="assets/Chandrashekhar_HS_Resume.pdf" target="_blank" rel="noopener" data-link>
+        Download Résumé
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      </a>
+
+      <div class="drawer__socials">
+        <a href="https://github.com/Chandrashekhar-cloud" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/chandrashekhar-cloud" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="mailto:chandrashekharhs653@gmail.com" aria-label="Email">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+  <div class="drawer__overlay" id="drawerOverlay"></div>
+
+  <main id="top">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="hero__inner">
+        <div class="hero__badge">
+          <span class="dot"></span>
+          B.E. COMPUTER SCIENCE — AI &amp; ML
+        </div>
+
+        <h1 class="hero__headline">
+          Build. <span class="hero__cycle" id="cycleWord">Deploy.</span> Scale.
+        </h1>
+
+        <p class="hero__sub">
+          I'm a computer science student who learns best by shipping things — small tools,
+          automated pipelines, and dashboards that turn raw logs into answers. Currently going
+          deeper on cloud infrastructure and CI/CD, one project at a time.
+        </p>
+
+        <div class="hero__actions">
+          <a href="#projects" class="btn btn--solid" data-link>View Projects</a>
+          <a href="assets/Chandrashekhar_HS_Resume.pdf" class="btn btn--outline" target="_blank" rel="noopener">
+            Download Resume
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 6px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero__facts">
+        <span class="fact-item">TUMKUR, INDIA</span>
+        <span class="fact-sep">•</span>
+        <span class="fact-item">CGPA 8.43</span>
+        <span class="fact-sep">•</span>
+        <span class="fact-item">OPEN TO OPPORTUNITIES</span>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="section" id="about">
+      <div class="section__container">
+        <p class="section__eyebrow">ABOUT</p>
+        <h2 class="section__title">A bit about me</h2>
+
+        <div class="about__grid">
+          <div class="about__text">
+            <p>
+              I started out just curious about how things break — and got hooked on figuring out
+              why. That curiosity turned into a habit of building: writing scripts to automate the
+              boring parts, setting up monitoring so problems show up before anyone has to ask,
+              and wiring pipelines so code ships itself.
+            </p>
+            <p>
+              I'm currently pursuing a B.E. in Computer Science (AI &amp; ML) at Sahyadri College
+              of Engineering and Management, and most of my free time goes into turning what I
+              learn into working projects — usually with Linux, Docker, and a cloud account I'm
+              probably not supposed to leave running overnight.
+            </p>
+          </div>
+
+          <div class="about__facts-card">
+            <ul class="about__facts">
+              <li>
+                <span class="fact-label">Location</span>
+                <strong class="fact-val">Tumkur, India</strong>
+              </li>
+              <li>
+                <span class="fact-label">Studying</span>
+                <strong class="fact-val">B.E. CSE (AI &amp; ML)</strong>
+              </li>
+              <li>
+                <span class="fact-label">CGPA</span>
+                <strong class="fact-val">8.43</strong>
+              </li>
+              <li>
+                <span class="fact-label">Focus areas</span>
+                <strong class="fact-val">Cloud · Automation · Reliability</strong>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EDUCATION ===== -->
+    <section class="section section--alt" id="education">
+      <div class="section__container">
+        <p class="section__eyebrow">EDUCATION</p>
+        <h2 class="section__title">Where I'm learning it</h2>
+
+        <div class="edu-card">
+          <div class="edu-card__header">
+            <div>
+              <h3 class="edu-card__school">Sahyadri College of Engineering and Management</h3>
+              <p class="edu-card__degree">B.E. in Computer Science and Engineering (AI &amp; ML)</p>
+            </div>
+            <span class="edu-card__date">Oct 2023 — Present</span>
+          </div>
+          <div class="edu-card__footer">
+            <span class="edu-card__meta-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg>
+              Mangalore, Karnataka
+            </span>
+            <span class="edu-card__meta-sep">•</span>
+            <span class="edu-card__meta-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+              CGPA: 8.43
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section class="section" id="projects">
+      <div class="section__container">
+        <p class="section__eyebrow">PROJECTS</p>
+        <h2 class="section__title">Things I've built</h2>
+
+        <!-- Project Categories Filter -->
+        <div class="projects__filter">
+          <button class="filter-btn is-active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="cloud">Cloud &amp; DevOps</button>
+          <button class="filter-btn" data-filter="automation">Automation &amp; Scripting</button>
+          <button class="filter-btn" data-filter="web">Web APIs</button>
+        </div>
+
+        <div class="projects-grid">
+
+          <article class="project-card" data-category="cloud">
+            <div class="project-card__header">
+              <h3 class="project-card__title">CloudOps Observability Platform</h3>
+              <span class="project-card__date">May — Jun 2026</span>
+            </div>
+            <p class="project-card__desc">
+              Deployed a production-style observability platform on AWS EC2 using Prometheus, Grafana, Loki, Promtail, Alertmanager, and Docker Compose for metrics, logging, visualization, and alerting.
+            </p>
+            <ul class="project-card__list">
+              <li>Deployed full monitoring stack on AWS EC2 (Ubuntu 24.04) using Docker Compose</li>
+              <li>Implemented metrics collection, centralized logging, dashboards, and alerting</li>
+              <li>Built Grafana dashboards using PromQL and visualized infrastructure & application health</li>
+              <li>Validated end-to-end alert pipeline by simulating application failures</li>
+            </ul>
+            <div class="project-card__tags">
+              <span>AWS EC2</span><span>Docker</span><span>Prometheus</span><span>Grafana</span><span>Loki</span><span>Flask</span><span>Alertmanager</span>
+            </div>
+            <a href="https://github.com/Chandrashekhar-cloud/cloudops-observability-platform" target="_blank" rel="noopener" class="project-card__link">
+              View on GitHub
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </a>
+          </article>
+
+          <article class="project-card" data-category="web automation">
+            <div class="project-card__header">
+              <h3 class="project-card__title">Task Manager API with CI/CD Pipeline</h3>
+              <span class="project-card__date">Jun 2026</span>
+            </div>
+            <p class="project-card__desc">
+              A REST API for managing tasks that tests, builds, and deploys itself every time code lands on main.
+            </p>
+            <ul class="project-card__list">
+              <li>Built full CRUD endpoints plus health-check and live system-stats routes</li>
+              <li>Covered it with 16 automated Pytest cases for CRUD, errors, and filtering</li>
+              <li>Set up a GitHub Actions pipeline to install, test, build, and trigger deploys</li>
+              <li>Containerized it, published images to Docker Hub, and auto-deployed to Render</li>
+            </ul>
+            <div class="project-card__tags">
+              <span>Flask</span><span>Docker</span><span>GitHub Actions</span><span>Pytest</span><span>Render</span>
+            </div>
+            <a href="https://github.com/Chandrashekhar-cloud/cicd-flask-app" target="_blank" rel="noopener" class="project-card__link">
+              View on GitHub
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </a>
+          </article>
+
+          <article class="project-card" data-category="automation">
+            <div class="project-card__header">
+              <h3 class="project-card__title">Linux Health Monitor</h3>
+              <span class="project-card__date">Jun 2026</span>
+            </div>
+            <p class="project-card__desc">
+              A Bash tool that keeps an eye on a Linux box and says something the moment it doesn't like what it sees.
+            </p>
+            <ul class="project-card__list">
+              <li>Tracks CPU, RAM, disk, load average, network stats, and running processes</li>
+              <li>Generates scheduled HTML health reports with cron, with configurable thresholds</li>
+              <li>Sends real-time alerts to Slack the moment a threshold is breached</li>
+            </ul>
+            <div class="project-card__tags">
+              <span>Bash</span><span>Cron</span><span>Slack Webhooks</span><span>Linux</span>
+            </div>
+            <a href="https://github.com/Chandrashekhar-cloud/sre-health-monitor" target="_blank" rel="noopener" class="project-card__link">
+              View on GitHub
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </a>
+          </article>
+
+          <article class="project-card project-card--secondary" data-category="cloud">
+            <div class="project-card__header">
+              <h3 class="project-card__title">Nginx on a Custom Port</h3>
+              <span class="project-card__date">Mini project</span>
+            </div>
+            <p class="project-card__desc">
+              A small one, but it's where a lot of Linux fundamentals clicked — installing and configuring Nginx from scratch on a custom port.
+            </p>
+            <div class="project-card__tags">
+              <span>Linux</span><span>Nginx</span>
+            </div>
+            <a href="https://github.com/Chandrashekhar-cloud/linux-nginx-mini-project" target="_blank" rel="noopener" class="project-card__link">
+              View on GitHub
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section class="section section--alt" id="skills">
+      <div class="section__container">
+        <p class="section__eyebrow">SKILLS</p>
+        <h2 class="section__title">What I work with</h2>
+
+        <div class="skills-grid">
+          <div class="skills-card">
+            <h4 class="skills-card__title">Languages &amp; Scripting</h4>
+            <div class="skills-card__chips">
+              <span>Python</span><span>Bash</span><span>JavaScript</span><span>Flask</span>
+            </div>
+          </div>
+          <div class="skills-card">
+            <h4 class="skills-card__title">Containers &amp; Automation</h4>
+            <div class="skills-card__chips">
+              <span>Docker</span><span>Docker Compose</span><span>Docker Hub</span><span>GitHub Actions</span><span>CI/CD</span>
+            </div>
+          </div>
+          <div class="skills-card">
+            <h4 class="skills-card__title">Monitoring &amp; Observability</h4>
+            <div class="skills-card__chips">
+              <span>Prometheus</span><span>Grafana</span><span>Loki</span><span>Promtail</span><span>Alertmanager</span>
+            </div>
+          </div>
+          <div class="skills-card">
+            <h4 class="skills-card__title">Cloud</h4>
+            <div class="skills-card__chips">
+              <span>AWS EC2</span><span>AWS S3</span><span>AWS IAM</span>
+            </div>
+          </div>
+          <div class="skills-card">
+            <h4 class="skills-card__title">Networking</h4>
+            <div class="skills-card__chips">
+              <span>TCP/IP</span><span>HTTP/HTTPS</span><span>DNS</span><span>DHCP</span>
+            </div>
+          </div>
+          <div class="skills-card">
+            <h4 class="skills-card__title">Tools &amp; OS</h4>
+            <div class="skills-card__chips">
+              <span>Linux</span><span>Git</span><span>GitHub</span><span>Cron</span><span>systemctl</span>
+            </div>
+          </div>
+          <div class="skills-card">
+            <h4 class="skills-card__title">Testing</h4>
+            <div class="skills-card__chips">
+              <span>Pytest</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CERTIFICATIONS ===== -->
+    <section class="section" id="certifications">
+      <div class="section__container">
+        <p class="section__eyebrow">CERTIFICATIONS</p>
+        <h2 class="section__title">Verified Credentials</h2>
+
+        <div class="certs-grid">
+          <div class="cert-card">
+            <div class="cert-card__body">
+              <h4 class="cert-card__title">AWS Cloud Practitioner Essentials</h4>
+              <p class="cert-card__issuer">Amazon Web Services</p>
+            </div>
+            <span class="cert-card__date">May 2026</span>
+          </div>
+          <div class="cert-card">
+            <div class="cert-card__body">
+              <h4 class="cert-card__title">Linux Essentials Certification</h4>
+              <p class="cert-card__issuer">Cisco Networking Academy (NDG)</p>
+            </div>
+            <span class="cert-card__date">Jun 2026</span>
+          </div>
+          <div class="cert-card">
+            <div class="cert-card__body">
+              <h4 class="cert-card__title">Networking Basics</h4>
+              <p class="cert-card__issuer">Cisco Networking Academy</p>
+            </div>
+            <span class="cert-card__date">Jun 2026</span>
+          </div>
+          <div class="cert-card">
+            <div class="cert-card__body">
+              <h4 class="cert-card__title">Python (Basic) Skill Certification</h4>
+              <p class="cert-card__issuer">HackerRank</p>
+            </div>
+            <span class="cert-card__date">Feb 2025</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section section--contact" id="contact">
+      <div class="section__container section__container--narrow">
+        <p class="section__eyebrow">GET IN TOUCH</p>
+        <h2 class="section__title">Let's build something.</h2>
+        <p class="contact__text">
+          I don't have a job title yet — just a growing pile of projects and a habit of finishing
+          what I start. If you're hiring, collaborating, or just curious, I'd love to hear from you.
+        </p>
+        <div class="hero__actions" style="margin-top: 24px;">
+          <a href="mailto:chandrashekharhs653@gmail.com" class="btn btn--solid">Email Me</a>
+          <a href="assets/Chandrashekhar_HS_Resume.pdf" class="btn btn--outline" target="_blank" rel="noopener">
+            Download Resume
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 6px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <span class="footer__name">CHANDRASHEKHAR H S</span>
+          <span class="footer__tagline">B.E. Computer Science (AI &amp; ML) student</span>
+        </div>
+
+        <div class="footer__links">
+          <a href="https://github.com/Chandrashekhar-cloud" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            <span>GitHub</span>
+          </a>
+          <a href="https://linkedin.com/in/chandrashekhar-cloud" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            <span>LinkedIn</span>
+          </a>
+          <a href="mailto:chandrashekharhs653@gmail.com">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span>Email</span>
+          </a>
+          <a href="tel:+916362137390">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>+91 63621 37390</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>Tumkur, India</span>
+        <span>&copy; 2026 Chandrashekhar H S</span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
